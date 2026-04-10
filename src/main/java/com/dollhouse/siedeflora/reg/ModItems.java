@@ -1,9 +1,12 @@
 package com.dollhouse.siedeflora.reg;
 
 import com.dollhouse.siedeflora.Siedeflora;
+import com.dollhouse.siedeflora.item.RakeItem;
+import com.dollhouse.siedeflora.item.TomatoSeedsItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -33,5 +36,34 @@ public class ModItems {
                             .saturationMod(2f)
                             .build()
             ))
+    );
+
+    // 耙
+    public static final RegistryObject<Item> RAKE = ITEMS.register(
+            "rake",
+            () -> new RakeItem(new Item.Properties()
+                    .durability(128) // 设置耐久度
+                    .rarity(Rarity.COMMON))
+    );
+
+    public static final RegistryObject<Item> SOIL_BLOCK_ITEM = ITEMS.register(
+            "soil_block",
+            () -> new BlockItem(ModBlocks.SOIL_BLOCK.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register(
+            "tomato_seeds",
+            TomatoSeedsItem::new
+    );
+
+    public static final RegistryObject<Item> TOMATO = ITEMS.register(
+            "tomato",
+            () -> new Item(new Item.Properties()
+                    .food(new FoodProperties.Builder()
+                            .nutrition(3)
+                            .saturationMod(0.6f)
+                            .build()
+                    )
+            )
     );
 }

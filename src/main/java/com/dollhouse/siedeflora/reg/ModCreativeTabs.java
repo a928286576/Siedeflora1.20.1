@@ -26,6 +26,10 @@ public class ModCreativeTabs {
                         output.accept(ModItems.EXAMPLE_ITEM.get());
                         output.accept(ModItems.EXAMPLE_BLOCK_ITEM.get());
                         output.accept(ModBlocks.EXAMPLE_BLOCK.get());
+                        output.accept(ModItems.RAKE.get());
+                        output.accept(ModItems.SOIL_BLOCK_ITEM.get());
+                        output.accept(ModItems.TOMATO_SEEDS.get());
+                        output.accept(ModItems.TOMATO.get());
                     })
                     .build()
     );

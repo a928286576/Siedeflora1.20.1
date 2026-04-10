@@ -17,6 +17,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         BlockWithItem(ModBlocks.EXAMPLE_BLOCK.get());
+        BlockWithItem(ModBlocks.SOIL_BLOCK.get());
     }
 
     private void BlockWithItem(Block block) {

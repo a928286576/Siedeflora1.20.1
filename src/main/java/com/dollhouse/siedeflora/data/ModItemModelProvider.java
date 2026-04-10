@@ -23,6 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // 普通物品模型
         basicItem(ModItems.EXAMPLE_ITEM.get());
+        basicItem(ModItems.RAKE.get());
         //simpleItem(ModItems.EXAMPLE_BLOCK_ITEM);
     }
 }

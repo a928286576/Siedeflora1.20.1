@@ -1,5 +1,6 @@
 package com.dollhouse.siedeflora;
 
+import com.dollhouse.siedeflora.reg.ModBlockEntities;
 import com.dollhouse.siedeflora.reg.ModBlocks;
 import com.dollhouse.siedeflora.reg.ModCreativeTabs;
 import com.dollhouse.siedeflora.reg.ModItems;
@@ -51,6 +52,7 @@ public class Siedeflora
         ModBlocks.init(modEventBus);
         ModItems.init(modEventBus);
         ModCreativeTabs.init(modEventBus);
+        ModBlockEntities.init(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
